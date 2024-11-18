@@ -32,7 +32,7 @@ function startScreen() {
   noStroke();
   background(69, 64, 119);
   fill(135, 191, 116);
-  ellipse(400, 400, 200); 
+  ellipse(400, 400, 200);
   rect(x + 30, y + 140, 25, 90, 20);
   rect(x - 60, y + 140, 25, 90, 20);
 
@@ -106,26 +106,25 @@ function gameScreen() {
   fill(9, 121, 105);
   arc(x, y, 20, 20, 0, PI);
 
+  fill(227, 232, 232);
+  ellipse(179, 230, 150);
 
-fill(227, 232, 232);
-ellipse(179, 230, 150);
+  fill(158, 165, 165);
+  ellipse(131, 198, 30);
+  ellipse(173, 280, 30);
+  ellipse(205, 226, 30);
+  ellipse(128, 245, 20);
+  ellipse(182, 179, 30);
+  ellipse(217, 266, 20);
+  ellipse(226, 199, 20);
+  ellipse(164, 229, 25);
 
-fill(158, 165, 165);
-ellipse(131,198,30);
-ellipse(173,280,30);
-ellipse(205,226,30);
-ellipse(128,245,20);
-ellipse(182,179,30);
-ellipse(217,266,20);
-ellipse(226,199,20);
-ellipse(164,229,25);
+  fill(194, 142, 196);
+  ellipse(599, 545, 150);
 
-fill(194, 142, 196);
-ellipse(599, 545, 150);
+  fill(229, 143, 71);
 
-fill(229, 143, 71 );
-
-arc(599, 545, 200, 30, 0, PI);
+  arc(599, 545, 200, 30, 0, PI);
 
   fill(239, 218, 100);
   ellipse(103, 488, 10);
@@ -142,8 +141,8 @@ arc(599, 545, 200, 30, 0, PI);
   pop();
 
   // landing pad
-  fill(153, 195, 181    );
-  rect(landX, height - 50, landWidth, 20,20);
+  fill(153, 195, 181);
+  rect(landX, height - 50, landWidth, 20, 20);
 
   // collision with landing pad
   if (y >= height - 50 && x > landX && x < landX + landWidth) {
@@ -165,16 +164,8 @@ arc(599, 545, 200, 30, 0, PI);
     state = "result";
   }
 
-  // Controls
-  if (keyIsDown(LEFT_ARROW)) {
-    speedX = -2;
-  } else if (keyIsDown(RIGHT_ARROW)) {
-    speedX = 2;
-  } else {
-    speedX = 0;
-  }
-
-  if (keyIsDown(UP_ARROW)) {
+  // Controls spacebar
+  if (keyIsDown(32)){
     speedY = thrust;
   }
 }
