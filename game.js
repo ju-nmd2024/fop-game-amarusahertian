@@ -1,5 +1,7 @@
+//This is my lunar landing game!
 //I asked chatgpt to make the stars :)
 
+//variables
 let x = 400;
 let y = 100;
 let speedX = 0;
@@ -32,10 +34,12 @@ function startScreen() {
   noStroke();
   background(69, 64, 119);
   fill(135, 191, 116);
+
+  // alien head
   ellipse(400, 400, 200);
   rect(x + 30, y + 140, 25, 90, 20);
   rect(x - 60, y + 140, 25, 90, 20);
-
+  // eyes
   fill(255, 255, 255);
   ellipse(x - 50, y + 135, 50);
   ellipse(x + 40, y + 135, 50);
@@ -44,6 +48,7 @@ function startScreen() {
   ellipse(x - 50, y + 135, 30);
   ellipse(x + 40, y + 135, 30);
 
+  // stars
   fill(239, 218, 100);
   drawStar(300 / 2, height / 2, 50, 10, 5);
   drawStar(100 / 2, 100 / 2, 50, 20, 5);
@@ -70,7 +75,7 @@ function startScreen() {
     }
     endShape(CLOSE);
   }
-
+// text start page 
   textSize(60);
   textAlign(CENTER, CENTER);
   fill(255);
@@ -87,14 +92,14 @@ function gameScreen() {
   x += speedX;
   y += speedY;
 
-  // spaceship/alien
+  // alien
   fill(135, 191, 116);
   push();
 
   ellipse(x, y, 40, 40);
   rect(x + 6, y - 35, 8, 30, 20);
   rect(x - 15, y - 35, 8, 30, 20);
-
+// eyes 
   fill(255, 255, 255);
   ellipse(x + 10, y - 35, 15);
   ellipse(x - 12, y - 35, 15);
@@ -102,10 +107,10 @@ function gameScreen() {
   fill(0, 0, 0);
   ellipse(x + 10, y - 35, 8);
   ellipse(x - 12, y - 35, 8);
-
+// mouth 
   fill(9, 121, 105);
   arc(x, y, 20, 20, 0, PI);
-
+//moon 
   fill(227, 232, 232);
   ellipse(179, 230, 150);
 
@@ -119,13 +124,13 @@ function gameScreen() {
   ellipse(226, 199, 20);
   ellipse(164, 229, 25);
 
+// other planet 
   fill(194, 142, 196);
   ellipse(599, 545, 150);
-
   fill(229, 143, 71);
-
   arc(599, 545, 200, 30, 0, PI);
 
+// The little dots 
   fill(239, 218, 100);
   ellipse(103, 488, 10);
   ellipse(80, 200, 10);
@@ -165,7 +170,7 @@ function gameScreen() {
   }
 
   // Controls spacebar
-  if (keyIsDown(32)){
+  if (keyIsDown(32)) {
     speedY = thrust;
   }
 }
@@ -177,11 +182,13 @@ function resultScreen() {
   textAlign(CENTER, CENTER);
   noStroke();
 
+  //alien
   fill(135, 191, 116);
   ellipse(400, 350, 200);
   rect(348, 200, 25, 90, 20);
   rect(430, 200, 25, 90, 20);
 
+  //eyes
   fill(255, 255, 255);
   ellipse(360, 200, 50);
   ellipse(440, 200, 50);
@@ -190,10 +197,11 @@ function resultScreen() {
   ellipse(360, 200, 30);
   ellipse(440, 200, 30);
 
+  // mouth 
   fill(9, 121, 105);
-
   rect(350, 352, 110, 20, 20);
 
+  // stars
   fill(239, 218, 100);
   drawStar(300 / 2, height / 2, 50, 10, 5);
   drawStar(100 / 2, 100 / 2, 50, 20, 5);
@@ -221,6 +229,7 @@ function resultScreen() {
     endShape(CLOSE);
   }
 
+// result text
   if (crash) {
     fill(9, 121, 105);
     text("You died :(", 400, 550);
