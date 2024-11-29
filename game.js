@@ -53,7 +53,7 @@ function startScreen() {
 
   // stars
   fill(239, 218, 100);
-  drawStar(300 / 2, height / 2, 50, 10, 5);
+  drawStar(300 / 2, 800 / 2, 50, 10, 5);
   drawStar(100 / 2, 100 / 2, 50, 20, 5);
   drawStar(600 / 2, 250 / 2, 50, 10, 8);
   drawStar(1000 / 2, 100 / 2, 50, 20, 5);
@@ -89,7 +89,7 @@ function startScreen() {
 
 function gameScreen() {
   background(69, 64, 119);
-
+ 
   speedY += gravity;
 
   x += speedX;
@@ -150,7 +150,7 @@ function gameScreen() {
 
   // landing pad
   fill(153, 195, 181);
-  rect(landX, height - 50, landWidth, 20, 20);
+  rect(landX, height - 60, landWidth, 20, 20);
 
   // collision with landing pad
   if (y >= height - 50 && x > landX && x < landX + landWidth) {
@@ -160,7 +160,7 @@ function gameScreen() {
     } else {
       crash = false;
       win = true;
-    }
+    } 
     speedY = 0;
   }
 
@@ -209,7 +209,7 @@ function resultScreen() {
 
   // stars
   fill(239, 218, 100);
-  drawStar(300 / 2, height / 2, 50, 10, 5);
+  drawStar(300 / 2, 800 / 2, 50, 10, 5);
   drawStar(100 / 2, 100 / 2, 50, 20, 5);
   drawStar(600 / 2, 250 / 2, 50, 10, 8);
   drawStar(1000 / 2, 100 / 2, 50, 20, 5);
@@ -281,7 +281,7 @@ function winScreen() {
 
   // stars
   fill(239, 218, 100);
-  drawStar(300 / 2, height / 2, 50, 10, 5);
+  drawStar(300 / 2, 800 / 2, 50, 10, 5);
   drawStar(100 / 2, 100 / 2, 50, 20, 5);
   drawStar(600 / 2, 250 / 2, 50, 10, 8);
   drawStar(1000 / 2, 100 / 2, 50, 20, 5);
