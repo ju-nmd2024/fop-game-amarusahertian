@@ -1,8 +1,6 @@
 //This is my lunar landing game!
 //I asked chatgpt to make the stars :)
 
-// TEST
-
 //variables
 let x = 400;
 let y = 100;
