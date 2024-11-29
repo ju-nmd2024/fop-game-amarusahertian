@@ -1,6 +1,8 @@
 //This is my lunar landing game!
 //I asked chatgpt to make the stars :)
 
+// TEST
+
 //variables
 let x = 400;
 let y = 100;
@@ -89,7 +91,7 @@ function startScreen() {
 
 function gameScreen() {
   background(69, 64, 119);
- 
+
   speedY += gravity;
 
   x += speedX;
@@ -160,7 +162,7 @@ function gameScreen() {
     } else {
       crash = false;
       win = true;
-    } 
+    }
     speedY = 0;
   }
 
